@@ -3,7 +3,7 @@ import requests
 
 def get_random_paragraph():
     """
-    Retard
+    Callam
     Returns paragraph of text for parsing.
     """
     while True:
