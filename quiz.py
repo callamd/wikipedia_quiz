@@ -1,6 +1,12 @@
 from question_manager import Question
 from app.utils import get_random_paragraph
+import random
 
+insult_list = [
+    "Are you a blithering moron?",
+    "Did you actually attend school?",
+    "Your IQ is definitely below 50?",
+]
 
 def play():
     score = 0
@@ -17,7 +23,7 @@ def play():
             score += 1
             continue
         else:
-            print("You stupid or something bruh? The answer is ({})".format(question.answer))
+            print("{} The answer is ({})".format(random.choice(insult_list), question.answer))
             score += 0
             continue
 
