@@ -4,8 +4,7 @@ import requests
 def get_random_infobox():
     """
     Callam
-
-    Returns infobox data in k, v format (dict)
+    Returns paragraph of text for parsing.
     """
 
     r = requests.get("https://en.wikipedia.org/wiki/Special:Random")
@@ -16,8 +15,6 @@ def get_random_infobox():
     paragraph = page.get("wikitext")
 
     return paragraph.data["exrest"]
-
-print(get_random_infobox())
 
 def make_question():
     """
