@@ -26,7 +26,7 @@ class Question(object):
         distance = self.levenshtein.distance()
         good_distance = len(self.answer)
         print(ratio(self.answer.lower(), provided_answer.lower()))
-        return ratio(self.answer, provided_answer) > 0.4
+        return ratio(self.answer.lower(), provided_answer.lower()) > 0.4
 
     def levenshtein(seq1, seq2):
         size_x = len(seq1) + 1
