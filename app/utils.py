@@ -20,8 +20,9 @@ def make_question():
 def victor_thing():
     """
     Victor
-
+    
     Whatever you like (ascii dicks?)
     """
-
+    
+    
     return _, _
