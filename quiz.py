@@ -39,5 +39,5 @@ def play():
 
 
 if __name__ == "__main__":
-    print("Hey Mate, wanna play ?")
+    print("IQ TEST 1.0")
     play()
