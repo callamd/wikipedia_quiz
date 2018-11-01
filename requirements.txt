@@ -1,2 +1,3 @@
 wptools
 requests
+Python-Levenshtein
