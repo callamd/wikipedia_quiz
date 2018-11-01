@@ -24,9 +24,7 @@ class Question(object):
         self.levenshtein = StringMatcher(self.answer, provided_answer)
         distance = self.levenshtein.distance()
         good_distance = len(self.answer)
-        print(distance/good_distance)
-        return (distance/good_distance) > 0.6
-
+        return (distance/good_distance) > 0.75
 
     def levenshtein(seq1, seq2):
         size_x = len(seq1) + 1
