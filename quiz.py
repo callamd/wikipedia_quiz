@@ -10,21 +10,19 @@ def play():
             paragraph = get_random_paragraph()
             question = Question(paragraph)
             valid = question.is_valid()
-            
-        user_answer = input(question.question() + "?")
+
+        user_answer = input(question.question() + "?\n")
         if question.is_correct(user_answer):
             print("Congratulations, you're correct!")
             score += 1
             continue
         else:
-            print("You stupid or something bruh?")
+            print("You stupid or something bruh? The answer is ({})".format(question.answer))
             score += 0
             continue
-            
 
-    
     print("You got {} out of 10")
-    
+
     if score< 5:
         print("Idiot..")
     elif score > 5 and score < 8:
