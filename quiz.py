@@ -1,5 +1,5 @@
 from question_manager import Question
-from app.utils import get_random_paragrah
+from app.utils import get_random_paragraph
 
 
 def play():

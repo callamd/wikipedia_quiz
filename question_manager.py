@@ -1,5 +1,6 @@
 import re
 from Levenshtein.StringMatcher import StringMatcher
+from Levenshtein import ratio
 
 paragraph = "Singur Reservoir is a reservoir formed by back waters of Singur Dam located on Manjira River in Medak District, Telangana, India. It is a sustained drinking water source of Hyderabad city.[1][2]"
 class Question(object):
@@ -24,7 +25,8 @@ class Question(object):
         self.levenshtein = StringMatcher(self.answer, provided_answer)
         distance = self.levenshtein.distance()
         good_distance = len(self.answer)
-        return (distance/good_distance) > 0.75
+        print(ratio(self.answer, provided_answer))
+        return ratio(self.answer, provided_answer) > 0.75
 
     def levenshtein(seq1, seq2):
         size_x = len(seq1) + 1
