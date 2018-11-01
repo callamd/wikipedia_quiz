@@ -6,7 +6,7 @@ paragraph = "Singur Reservoir is a reservoir formed by back waters of Singur Dam
 class Question(object):
 
     def __init__(self, paragraph):
-        self.reg = re.compile(r"([a-zA-Z ]+) (is a| was a) ([a-zA-Z ]+)")
+        self.reg = re.compile(r"([a-zA-Z ]+) (is a| was a) ([a-zA-Z -]+)")
         self.match = self.reg.match(paragraph)
         self.groups = None
         self.answer = None
@@ -25,7 +25,7 @@ class Question(object):
         self.levenshtein = StringMatcher(self.answer, provided_answer)
         distance = self.levenshtein.distance()
         good_distance = len(self.answer)
-        print(ratio(self.answer.lower(), provided_answer.lower()))
+        #print(ratio(self.answer.lower(), provided_answer.lower()))
         return ratio(self.answer.lower(), provided_answer.lower()) > 0.4
 
     def levenshtein(seq1, seq2):

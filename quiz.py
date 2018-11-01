@@ -17,7 +17,8 @@ def play():
             question = Question(paragraph)
             valid = question.is_valid()
 
-        user_answer = input(question.question() + "?\n")
+        print(question.question() + "?")
+        user_answer = input()
         if question.is_correct(user_answer):
             print("Congratulations, you're correct!")
             score += 1
